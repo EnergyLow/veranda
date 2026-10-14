@@ -1,0 +1,23 @@
+# Cloudflare Wrangler
+.wrangler/
+.dev.vars
+.wrangler.toml.bak
+
+# Node
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Секреты
+.env
+.env.local
+secrets.txt
