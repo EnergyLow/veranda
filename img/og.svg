@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="o" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E3A2F"/>
+      <stop offset="1" stop-color="#0A1410"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#o)"/>
+  <g fill="none" stroke="#C9A961" stroke-opacity="0.22">
+    <circle cx="600" cy="315" r="220"/>
+    <circle cx="600" cy="315" r="160"/>
+  </g>
+  <text x="600" y="340" text-anchor="middle" font-family="Georgia,serif" font-size="88" fill="#EFE0B8" font-style="italic">ВерАнда</text>
+  <text x="600" y="400" text-anchor="middle" font-family="monospace" font-size="16" fill="#C9A961" letter-spacing="12">FUSION CAFE · ЛУГАНСК</text>
+</svg>

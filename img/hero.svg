@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="h" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E3A2F"/>
+      <stop offset="1" stop-color="#0A1410"/>
+    </linearGradient>
+    <radialGradient id="hg" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#C9A961" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#C9A961" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hd" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="24" cy="24" r="1" fill="#C9A961" fill-opacity="0.18"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#h)"/>
+  <rect width="1920" height="1080" fill="url(#hd)"/>
+  <rect width="1920" height="1080" fill="url(#hg)"/>
+  <g fill="none" stroke="#C9A961" stroke-opacity="0.2" stroke-width="1">
+    <circle cx="960" cy="540" r="480"/>
+    <circle cx="960" cy="540" r="360"/>
+    <circle cx="960" cy="540" r="240"/>
+    <circle cx="960" cy="540" r="120"/>
+  </g>
+  <rect x="120" y="120" width="1680" height="840" fill="none" stroke="#C9A961" stroke-opacity="0.25" stroke-width="1"/>
+  <rect x="140" y="140" width="1640" height="800" fill="none" stroke="#C9A961" stroke-opacity="0.12" stroke-width="1"/>
+</svg>

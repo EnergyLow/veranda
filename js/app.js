@@ -463,10 +463,10 @@ const Validators = {
     return d >= today || 'Дата не может быть в прошлом';
   },
   time: (v) => {
-    if (!v) return 'Выберите время';
-    const [h] = v.split(':').map(Number);
-    return (h >= 10 && h <= 23) || 'Время работы: 10:00–23:00';
-  },
+  if (!v) return 'Выберите время';
+  const [h] = v.split(':').map(Number);
+  return (h >= 10 && h <= 22) || 'Время работы: 10:00–22:00';
+},
   guests: (v) => (Number(v) >= 1 && Number(v) <= 20) || 'От 1 до 20 гостей',
   text: (v) => v.trim().length >= 10 || 'Минимум 10 символов',
   rating: (v) => (Number(v) >= 1 && Number(v) <= 5) || 'Выберите оценку',
@@ -1021,12 +1021,25 @@ const Modal = {
 (function gallery() {
   const grid = $('#gallery-grid');
   if (!grid) return;
-  const imgs = Array.from({ length: 8 }, (_, i) => `img/gallery-${i + 1}.webp`);
-  grid.innerHTML = imgs.map((src, i) => `
-    <picture>
-      <source srcset="${src}" type="image/webp">
-      <img src="${src.replace('.webp', '.jpg')}" alt="Фото кафе ВерАнда ${i + 1}" loading="lazy" decoding="async" width="400" height="400">
-    </picture>
+
+  // Реальные фото с Unsplash — тематика кафе, еды, интерьера.
+  // При переходе на продакшен скачай их и замени на локальные img/gallery-N.webp
+  const sources = [
+    'https://sun9-55.vkuserphoto.ru/s/v1/ig2/MG4cJ6BomEkO8FCUTlu9deeJ6ZRj6wwQhvisqUPZKPslKKZySVoQbPA4h55OaB_LNq3y52rX5ZMI4tPSYUc-AKSt.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&cs=1254x0', // ресторан
+    'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80',   // салат
+    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80', // пицца
+    'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80', // паста
+    'https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80', // стейк
+    'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80',   // десерт
+    'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80', // зал
+    'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80',   // бургер
+  ];
+
+  grid.innerHTML = sources.map((src, i) => `
+    <img src="${src}"
+         alt="Фото кафе ВерАнда ${i + 1}"
+         loading="lazy" decoding="async"
+         width="400" height="400">
   `).join('');
 })();
 
